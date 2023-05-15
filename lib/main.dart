@@ -1,4 +1,4 @@
-import 'package:animations/animations/page_Animations/SizeTransition_animations.dart';
+import 'package:animations/animations/page_Animations/fade_trnsitions.dart';
 import 'package:flutter/material.dart';
 
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyCustomTransitions(),
+      home:  MyCustomTransitionFade(),
     );
   }
 }
