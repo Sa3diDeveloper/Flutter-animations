@@ -6,19 +6,13 @@ class SecondPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          MaterialButton(
-              color: Colors.tealAccent,
-              child: const Text('TAP TO VIEW SIZE ANIMATION 1'),
-              onPressed: () {
-                //Navigator.push(context, SizeTransition2(page));
-              })
-        ],
-      ),
+    return Scaffold(
+      body: Center(
+          child: Text("Welcome",
+              style: TextStyle(
+                fontSize: 28,
+                fontWeight: FontWeight.w900,
+              ))),
     );
   }
 }
