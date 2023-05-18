@@ -2,15 +2,15 @@ import 'package:animations/animations/page_Animations/fade_trnsitions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MyCustomScaleTransitions extends StatefulWidget {
-  const MyCustomScaleTransitions({super.key});
+class MyCustomSlideTransitions extends StatefulWidget {
+  const MyCustomSlideTransitions({super.key});
 
   @override
-  State<MyCustomScaleTransitions> createState() =>
-      _MyCustomScaleTransitionsState();
+  State<MyCustomSlideTransitions> createState() =>
+      _MyCustomSlideTransitionsState();
 }
 
-class _MyCustomScaleTransitionsState extends State<MyCustomScaleTransitions> {
+class _MyCustomSlideTransitionsState extends State<MyCustomSlideTransitions> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
