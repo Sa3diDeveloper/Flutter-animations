@@ -1,6 +1,8 @@
+import 'package:animations/animations/animated_grid_view/animated_grid%20copy.dart';
 import 'package:animations/animations/animated_lsit/animated_lits%203.dart';
-import 'package:animations/animations/animated_lsit/animated_lits1.dart';
 import 'package:flutter/material.dart';
+
+import 'animations/animated_grid_view/animated_grid.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MyCustomSlideAnimation2(),
+      home: MyCustomGridView(),
     );
   }
 }
