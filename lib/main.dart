@@ -1,5 +1,4 @@
-import 'package:animations/animations/button_Animations/MyCustomAnimatedBtn.dart';
-import 'package:animations/animations/button_Animations/MyCustomAnimatedBtn0.1.dart';
+import 'package:animations/animations/animated_lsit/animated_lits.dart';
 import 'package:animations/animations/button_Animations/FoldableOptions.dart';
 
 import 'package:flutter/material.dart';
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MyCustomFoldableOptionsBtn(),
+      home: MyCustomAnimatedList(),
     );
   }
 }
