@@ -1,4 +1,4 @@
-import 'package:animations/animations/animated_lsit/animated_lits%20copy%204.dart';
+import 'package:animations/animations/animated_lsit/animated_lits%203.dart';
 import 'package:animations/animations/animated_lsit/animated_lits1.dart';
 import 'package:flutter/material.dart';
 
