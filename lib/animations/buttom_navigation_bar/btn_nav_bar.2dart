@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class BtnNavBar extends StatefulWidget {
+class HomePage11 extends StatefulWidget {
   @override
-  BtnNavBarState createState() => BtnNavBarState();
+  HomePage11State createState() => HomePage11State();
 }
 
-class BtnNavBarState extends State<BtnNavBar> {
+class HomePage11State extends State<HomePage11> {
   var currentIndex = 0;
 
   @override
@@ -43,6 +43,15 @@ class BtnNavBarState extends State<BtnNavBar> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                SizedBox(height: size.width * .03),
+                Icon(
+                  listOfIcons[index],
+                  size: size.width * .076,
+                  color: index == currentIndex
+                      ? Colors.blueAccent
+                      : Colors.black38,
+                ),
+                SizedBox(height: size.width * .01),
                 AnimatedContainer(
                   duration: Duration(milliseconds: 1500),
                   curve: Curves.fastLinearToSlowEaseIn,
@@ -56,18 +65,10 @@ class BtnNavBarState extends State<BtnNavBar> {
                   decoration: BoxDecoration(
                     color: Colors.blueAccent,
                     borderRadius: BorderRadius.vertical(
-                      bottom: Radius.circular(10),
+                      top: Radius.circular(10),
                     ),
                   ),
                 ),
-                Icon(
-                  listOfIcons[index],
-                  size: size.width * .076,
-                  color: index == currentIndex
-                      ? Colors.blueAccent
-                      : Colors.black38,
-                ),
-                SizedBox(height: size.width * .03),
               ],
             ),
           ),
