@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
-class HomePage11 extends StatefulWidget {
+
+class BtnNavBar2 extends StatefulWidget {
+  const BtnNavBar2({super.key});
+
   @override
-  HomePage11State createState() => HomePage11State();
+  State<BtnNavBar2> createState() => _BtnNavBar2State();
 }
 
-class HomePage11State extends State<HomePage11> {
-  var currentIndex = 0;
-
+class _BtnNavBar2State extends State<BtnNavBar2> {  var currentIndex = 0;
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+   Size size = MediaQuery.of(context).size;
     return Scaffold(
       bottomNavigationBar: Container(
         margin: EdgeInsets.all(20),
@@ -83,4 +84,5 @@ class HomePage11State extends State<HomePage11> {
     Icons.settings_rounded,
     Icons.person_rounded,
   ];
+  
 }

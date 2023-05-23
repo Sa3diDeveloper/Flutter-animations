@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class BtnNavBar extends StatefulWidget {
+class BtnNavBar1 extends StatefulWidget {
   @override
-  BtnNavBarState createState() => BtnNavBarState();
+  BtnNavBar1State createState() => BtnNavBar1State();
 }
 
-class BtnNavBarState extends State<BtnNavBar> {
+class BtnNavBar1State extends State<BtnNavBar1> {
   var currentIndex = 0;
 
   @override
