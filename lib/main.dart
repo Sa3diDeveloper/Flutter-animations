@@ -1,9 +1,6 @@
-import 'package:animations/animations/animated_grid_view/animated_grid%20copy.dart';
-import 'package:animations/animations/splash_animations/splash_Animations.dart';
+import 'package:animations/animations/buttom_navigation_bar/btn_nav_bar.dart';
 import 'package:flutter/material.dart';
 
-import 'animations/login_page_animations/login_page_Animatrions.dart';
-import 'animations/login_page_animations/login_page_animations1.dart';
 
 
 void main() {
@@ -22,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LogInAnimations(),
+      home: BtnNavBar(),
     );
   }
 }
