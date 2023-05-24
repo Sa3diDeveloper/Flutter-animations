@@ -1,7 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyCustomFoldableOptionsBtn extends StatefulWidget {
+  const MyCustomFoldableOptionsBtn({super.key});
+
   @override
   _MyCustomFoldableOptionsBtnState createState() =>
       _MyCustomFoldableOptionsBtnState();
@@ -14,7 +15,7 @@ class _MyCustomFoldableOptionsBtnState extends State<MyCustomFoldableOptionsBtn>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       floatingActionButton: FoldableOptions(),
       floatingActionButtonLocation: FloatingActionButtonLocation.miniEndDocked,
       // body: Align(
@@ -26,6 +27,8 @@ class _MyCustomFoldableOptionsBtnState extends State<MyCustomFoldableOptionsBtn>
 }
 
 class FoldableOptions extends StatefulWidget {
+  const FoldableOptions({super.key});
+
   @override
   _FoldableOptionsState createState() => _FoldableOptionsState();
 }
@@ -47,10 +50,10 @@ class _FoldableOptionsState extends State<FoldableOptions>
   late Animation<Alignment> fifthAnim;
   late Animation<double> verticalPadding;
   late AnimationController controller;
-  final duration = Duration(milliseconds: 190);
+  final duration = const Duration(milliseconds: 190);
 
   Widget getItem(IconData source) {
-    final size = 45.0;
+    const size = 45.0;
     return GestureDetector(
       onTap: () {
         controller.reverse();
@@ -58,7 +61,7 @@ class _FoldableOptionsState extends State<FoldableOptions>
       child: Container(
         width: size,
         height: size,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Color(0XFFE95A8B),
           borderRadius: BorderRadius.all(
             Radius.circular(40),
@@ -74,18 +77,18 @@ class _FoldableOptionsState extends State<FoldableOptions>
   }
 
   Widget buildPrimaryItem(IconData source) {
-    final size = 45.0;
+    const size = 45.0;
     return Container(
       width: size,
       height: size,
       decoration: BoxDecoration(
-        color: Color(0XFFE95A8B),
-        borderRadius: BorderRadius.all(
+        color: const Color(0XFFE95A8B),
+        borderRadius: const BorderRadius.all(
           Radius.circular(40),
         ),
         boxShadow: [
           BoxShadow(
-              color: Color(0XFFE95A8B).withOpacity(0.8),
+              color: const Color(0XFFE95A8B).withOpacity(0.8),
               blurRadius: verticalPadding.value),
         ],
       ),
@@ -126,7 +129,7 @@ class _FoldableOptionsState extends State<FoldableOptions>
     return Container(
       width: 140,
       height: 210,
-      margin: EdgeInsets.only(right: 15),
+      margin: const EdgeInsets.only(right: 15),
       child: AnimatedBuilder(
         animation: controller,
         builder: (context, child) {

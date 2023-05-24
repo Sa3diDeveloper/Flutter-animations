@@ -4,6 +4,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class MyCustomSplashScreen extends StatefulWidget {
+  const MyCustomSplashScreen({super.key});
+
   @override
   _MyCustomSplashScreenState createState() => _MyCustomSplashScreenState();
 }
@@ -23,7 +25,7 @@ class _MyCustomSplashScreenState extends State<MyCustomSplashScreen>
     super.initState();
 
     _controller =
-        AnimationController(vsync: this, duration: Duration(seconds: 3));
+        AnimationController(vsync: this, duration: const Duration(seconds: 3));
 
     animation1 = Tween<double>(begin: 40, end: 20).animate(CurvedAnimation(
         parent: _controller, curve: Curves.fastLinearToSlowEaseIn))
@@ -35,22 +37,22 @@ class _MyCustomSplashScreenState extends State<MyCustomSplashScreen>
 
     _controller.forward();
 
-    Timer(Duration(seconds: 2), () {
+    Timer(const Duration(seconds: 2), () {
       setState(() {
         _fontSize = 1.06;
       });
     });
 
-    Timer(Duration(seconds: 2), () {
+    Timer(const Duration(seconds: 2), () {
       setState(() {
         _containerSize = 2;
         _containerOpacity = 1;
       });
     });
 
-    Timer(Duration(seconds: 4), () {
+    Timer(const Duration(seconds: 4), () {
       setState(() {
-        Navigator.pushReplacement(context, PageTransition(SecondPage()));
+        Navigator.pushReplacement(context, PageTransition(const SecondPage()));
       });
     });
   }
@@ -63,8 +65,8 @@ class _MyCustomSplashScreenState extends State<MyCustomSplashScreen>
 
   @override
   Widget build(BuildContext context) {
-    double _width = MediaQuery.of(context).size.width;
-    double _height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
 
     return Scaffold(
       backgroundColor: Colors.deepPurple,
@@ -73,12 +75,12 @@ class _MyCustomSplashScreenState extends State<MyCustomSplashScreen>
           Column(
             children: [
               AnimatedContainer(
-                duration: Duration(milliseconds: 2000),
+                duration: const Duration(milliseconds: 2000),
                 curve: Curves.fastLinearToSlowEaseIn,
-                height: _height / _fontSize
+                height: height / _fontSize
               ),
               AnimatedOpacity(
-                duration: Duration(milliseconds: 1000),
+                duration: const Duration(milliseconds: 1000),
                 opacity: _textOpacity,
                 child: Text(
                   'YOUR APP\'S NAME',
@@ -93,21 +95,21 @@ class _MyCustomSplashScreenState extends State<MyCustomSplashScreen>
           ),
           Center(
             child: AnimatedOpacity(
-              duration: Duration(milliseconds: 2000),
+              duration: const Duration(milliseconds: 2000),
               curve: Curves.fastLinearToSlowEaseIn,
               opacity: _containerOpacity,
               child: AnimatedContainer(
-                duration: Duration(milliseconds: 2000),
+                duration: const Duration(milliseconds: 2000),
                 curve: Curves.fastLinearToSlowEaseIn,
-                height: _width / _containerSize,
-                width: _width / _containerSize,
+                height: width / _containerSize,
+                width: width / _containerSize,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(30),
                 ),
                 // child: Image.asset('assets/images/file_name.png')
-                child: Text(
+                child: const Text(
                   'YOUR APP\'S LOGO',
                 ),
               ),
@@ -125,7 +127,7 @@ class PageTransition extends PageRouteBuilder {
   PageTransition(this.page)
       : super(
           pageBuilder: (context, animation, anotherAnimation) => page,
-          transitionDuration: Duration(milliseconds: 2000),
+          transitionDuration: const Duration(milliseconds: 2000),
           transitionsBuilder: (context, animation, anotherAnimation, child) {
             animation = CurvedAnimation(curve: Curves.fastLinearToSlowEaseIn,
               parent: animation,
@@ -134,8 +136,8 @@ class PageTransition extends PageRouteBuilder {
               alignment: Alignment.bottomCenter,
               child: SizeTransition(
                 sizeFactor: animation,
-                child: page,
                 axisAlignment: 0,
+                child: page,
               ),
             );
           },
@@ -143,6 +145,8 @@ class PageTransition extends PageRouteBuilder {
 }
 
 class SecondPage extends StatelessWidget {
+  const SecondPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -151,7 +155,7 @@ class SecondPage extends StatelessWidget {
        
         backgroundColor: Colors.deepPurple,
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'YOUR APP\'S NAME',
           style: TextStyle(
             color: Colors.white,

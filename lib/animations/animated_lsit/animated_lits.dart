@@ -1,6 +1,5 @@
 
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
@@ -22,7 +21,7 @@ class _MyCustomAnimatedListState extends State<MyCustomAnimatedList> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => SlideAnimation1()),
+              MaterialPageRoute(builder: (context) => const SlideAnimation1()),
             );
           },
         ),

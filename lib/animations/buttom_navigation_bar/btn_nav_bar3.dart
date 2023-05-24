@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class BtnNavBar3 extends StatefulWidget {
+  const BtnNavBar3({super.key});
+
   @override
   BtnNavBar3State createState() => BtnNavBar3State();
 }
@@ -14,7 +16,7 @@ class BtnNavBar3State extends State<BtnNavBar3> {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       bottomNavigationBar: Container(
-        margin: EdgeInsets.all(20),
+        margin: const EdgeInsets.all(20),
         height: screenWidth * .155,
         decoration: BoxDecoration(
           color: Colors.white,
@@ -22,7 +24,7 @@ class BtnNavBar3State extends State<BtnNavBar3> {
             BoxShadow(
               color: Colors.black.withOpacity(.15),
               blurRadius: 30,
-              offset: Offset(0, 10),
+              offset: const Offset(0, 10),
             ),
           ],
           borderRadius: BorderRadius.circular(50),
@@ -46,7 +48,7 @@ class BtnNavBar3State extends State<BtnNavBar3> {
                   width: screenWidth * .2125,
                   child: Center(
                     child: AnimatedContainer(
-                      duration: Duration(seconds: 1),
+                      duration: const Duration(seconds: 1),
                       curve: Curves.fastLinearToSlowEaseIn,
                       height: index == currentIndex ? screenWidth * .12 : 0,
                       width: index == currentIndex ? screenWidth * .2125 : 0,

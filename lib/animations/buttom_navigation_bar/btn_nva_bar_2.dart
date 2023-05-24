@@ -14,7 +14,7 @@ class _BtnNavBar2State extends State<BtnNavBar2> {  var currentIndex = 0;
    Size size = MediaQuery.of(context).size;
     return Scaffold(
       bottomNavigationBar: Container(
-        margin: EdgeInsets.all(20),
+        margin: const EdgeInsets.all(20),
         height: size.width * .155,
         decoration: BoxDecoration(
           color: Colors.white,
@@ -22,7 +22,7 @@ class _BtnNavBar2State extends State<BtnNavBar2> {  var currentIndex = 0;
             BoxShadow(
               color: Colors.black.withOpacity(.15),
               blurRadius: 30,
-              offset: Offset(0, 10),
+              offset: const Offset(0, 10),
             ),
           ],
           borderRadius: BorderRadius.circular(50),
@@ -54,7 +54,7 @@ class _BtnNavBar2State extends State<BtnNavBar2> {  var currentIndex = 0;
                 ),
                 SizedBox(height: size.width * .01),
                 AnimatedContainer(
-                  duration: Duration(milliseconds: 1500),
+                  duration: const Duration(milliseconds: 1500),
                   curve: Curves.fastLinearToSlowEaseIn,
                   margin: EdgeInsets.only(
                     bottom: index == currentIndex ? 0 : size.width * .029,
@@ -63,7 +63,7 @@ class _BtnNavBar2State extends State<BtnNavBar2> {  var currentIndex = 0;
                   ),
                   width: size.width * .128,
                   height: index == currentIndex ? size.width * .014 : 0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.blueAccent,
                     borderRadius: BorderRadius.vertical(
                       top: Radius.circular(10),

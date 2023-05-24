@@ -1,5 +1,4 @@
 import 'package:animations/animations/page_Animations/fade_trnsitions.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyCustomSlideTransitions extends StatefulWidget {
@@ -48,10 +47,10 @@ class SlideTransitionRoute extends PageRouteBuilder {
               return Align(
                 alignment: Alignment.centerLeft,
                 child: SlideTransition(
-                    child: page,
                     position:
                         Tween(begin: const Offset(0.1, 0.0), end: const Offset(0.0, 0.0))
-                            .animate(animations)),
+                            .animate(animations),
+                    child: page),
               );
             });
 }

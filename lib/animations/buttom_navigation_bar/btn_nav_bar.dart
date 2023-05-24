@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 
 class BtnNavBar extends StatefulWidget {
+  const BtnNavBar({super.key});
+
   @override
   BtnNavBarState createState() => BtnNavBarState();
 }
@@ -15,7 +17,7 @@ class BtnNavBarState extends State<BtnNavBar> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       bottomNavigationBar: Container(
-        margin: EdgeInsets.all(20),
+        margin: const EdgeInsets.all(20),
         height: size.width * .155,
         decoration: BoxDecoration(
           color: Colors.white,
@@ -23,7 +25,7 @@ class BtnNavBarState extends State<BtnNavBar> {
             BoxShadow(
               color: Colors.black.withOpacity(.15),
               blurRadius: 30,
-              offset: Offset(0, 10),
+              offset: const Offset(0, 10),
             ),
           ],
           borderRadius: BorderRadius.circular(50),
@@ -46,7 +48,7 @@ class BtnNavBarState extends State<BtnNavBar> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 AnimatedContainer(
-                  duration: Duration(milliseconds: 1500),
+                  duration: const Duration(milliseconds: 1500),
                   curve: Curves.fastLinearToSlowEaseIn,
                   margin: EdgeInsets.only(
                     bottom: index == currentIndex ? 0 : size.width * .029,
@@ -55,7 +57,7 @@ class BtnNavBarState extends State<BtnNavBar> {
                   ),
                   width: size.width * .128,
                   height: index == currentIndex ? size.width * .014 : 0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.blueAccent,
                     borderRadius: BorderRadius.vertical(
                       bottom: Radius.circular(10),

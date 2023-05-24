@@ -1,5 +1,4 @@
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
@@ -20,7 +19,7 @@ class _MyCustomSlideAnimationState extends State<MyCustomSlideAnimation> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => SlideAnimation3()),
+              MaterialPageRoute(builder: (context) => const SlideAnimation3()),
             );
           },
         ),
@@ -35,7 +34,7 @@ class SlideAnimation3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double _w = MediaQuery.of(context).size.width;
+    double w = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         title: const Text("Go Back"),
@@ -44,7 +43,7 @@ class SlideAnimation3 extends StatelessWidget {
       ),
       body: AnimationLimiter(
         child: ListView.builder(
-          padding: EdgeInsets.all(_w / 30),
+          padding: EdgeInsets.all(w / 30),
           physics:
               const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
           itemCount: 20,
@@ -59,8 +58,8 @@ class SlideAnimation3 extends StatelessWidget {
                   curve: Curves.fastLinearToSlowEaseIn,
                   duration: const Duration(milliseconds: 2500),
                   child: Container(
-                    margin: EdgeInsets.only(bottom: _w / 20),
-                    height: _w / 4,
+                    margin: EdgeInsets.only(bottom: w / 20),
+                    height: w / 4,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: const BorderRadius.all(Radius.circular(20)),

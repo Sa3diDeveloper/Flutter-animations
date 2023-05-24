@@ -1,8 +1,9 @@
 import 'dart:async';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyCustomFadeTransition extends StatefulWidget {
+  const MyCustomFadeTransition({super.key});
+
   @override
   _MyCustomFadeTransitionState createState() => _MyCustomFadeTransitionState();
 }
@@ -17,19 +18,19 @@ class _MyCustomFadeTransitionState extends State<MyCustomFadeTransition>
     super.initState();
 
     scaleController =
-        AnimationController(vsync: this, duration: Duration(seconds: 1))
+        AnimationController(vsync: this, duration: const Duration(seconds: 1))
           ..addStatusListener(
             (status) {
               if (status == AnimationStatus.completed) {
                 Navigator.push(
                   context,
                   AnimatingRoute(
-                    Destination(),
-                    Destination(),
+                    const Destination(),
+                    const Destination(),
                   ),
                 );
                 Timer(
-                  Duration(milliseconds: 300),
+                  const Duration(milliseconds: 300),
                   () {
                     // print('worked');
                     scaleController.reset();
@@ -60,7 +61,7 @@ class _MyCustomFadeTransitionState extends State<MyCustomFadeTransition>
           child: Container(
             width: 100,
             height: 100,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.blue,
               shape: BoxShape.circle,
             ),
@@ -69,7 +70,7 @@ class _MyCustomFadeTransitionState extends State<MyCustomFadeTransition>
               builder: (c, child) => Transform.scale(
                 scale: scaleAnimation.value,
                 child: Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Color.fromARGB(255, 245, 245, 245),
                   ),
@@ -84,13 +85,15 @@ class _MyCustomFadeTransitionState extends State<MyCustomFadeTransition>
 }
 
 class Destination extends StatelessWidget {
+  const Destination({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
         centerTitle: true,
-        title: Text('Go Back'),
+        title: const Text('Go Back'),
       ),
     );
   }

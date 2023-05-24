@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyCustomAnimatedBtn extends StatefulWidget {
@@ -17,7 +16,7 @@ class _MyCustomAnimatedBtnState extends State<MyCustomAnimatedBtn>
     super.initState();
     animationController = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 1),
+      duration: const Duration(seconds: 1),
     )
       ..forward()
       ..repeat(reverse: true);
@@ -40,7 +39,7 @@ class _MyCustomAnimatedBtnState extends State<MyCustomAnimatedBtn>
             return Container(
               decoration: ShapeDecoration(
                 color: Colors.white.withOpacity(0.5),
-                shape: CircleBorder(),
+                shape: const CircleBorder(),
               ),
               child: Padding(
                 padding: EdgeInsets.all(
@@ -51,7 +50,7 @@ class _MyCustomAnimatedBtnState extends State<MyCustomAnimatedBtn>
             );
           },
           child: Container(
-            decoration: ShapeDecoration(
+            decoration: const ShapeDecoration(
               color: Colors.white,
               shape: CircleBorder(),
             ),
@@ -60,7 +59,7 @@ class _MyCustomAnimatedBtnState extends State<MyCustomAnimatedBtn>
                 print('button tapped');
               },
               color: Colors.blue,
-              icon: Icon(
+              icon: const Icon(
                 Icons.calendar_today,
                 size: 24,
               ),

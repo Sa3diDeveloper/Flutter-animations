@@ -15,11 +15,11 @@ class MyCustomTransitionFade extends StatelessWidget {
           children: [
             ElevatedButton(
                 onPressed: () =>
-                    Navigator.push(context, FadeRoute1(SecondPage())),
+                    Navigator.push(context, FadeRoute1(const SecondPage())),
                 child: const Text('TAP TO VIEW FADE ANIMATION 1')),
             ElevatedButton(
               onPressed: () =>
-                  Navigator.push(context, FadeRoute2(SecondPage())),
+                  Navigator.push(context, FadeRoute2(const SecondPage())),
               child: const Text('TAP TO VIEW FADE ANIMATION 2'),
             ),
           ],

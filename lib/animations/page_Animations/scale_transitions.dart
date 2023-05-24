@@ -1,5 +1,4 @@
 import 'package:animations/animations/page_Animations/fade_trnsitions.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyCustomScaleTransitions extends StatefulWidget {
