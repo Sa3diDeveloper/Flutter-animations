@@ -1,6 +1,3 @@
-import 'package:animations/animations/buttom_navigation_bar/btn_nav_bar.dart';
-import 'package:animations/animations/buttom_navigation_bar/btn_nav_bar1.dart';
-import 'package:animations/animations/buttom_navigation_bar/btn_nav_bar3.dart';
 import 'package:animations/animations/buttom_navigation_bar/btn_nva_bar_2.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: BtnNavBar3(),
+      home: BtnNavBar2(),
     );
   }
 }
