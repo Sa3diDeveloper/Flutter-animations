@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyCustomSwitch extends StatefulWidget {
@@ -13,7 +12,7 @@ class _MyCustomSwitchState extends State<MyCustomSwitch>
   bool isChecked = false;
   final Duration _duration = const Duration(milliseconds: 370);
   late Animation<Alignment> _animation;
- late AnimationController _animationController;
+  late AnimationController _animationController;
 
   @override
   void initState() {
@@ -26,7 +25,7 @@ class _MyCustomSwitchState extends State<MyCustomSwitch>
       CurvedAnimation(
         parent: _animationController,
         curve: Curves.easeOut,
-        reverseCurve: Curves.easeIn,
+        reverseCurve: Curves.fastEaseInToSlowEaseOut,
       ),
     );
   }

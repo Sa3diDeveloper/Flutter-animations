@@ -2,14 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class MyCustomWidget extends StatefulWidget {
-  const MyCustomWidget({super.key});
+class MyCustomSwitch1 extends StatefulWidget {
+  const MyCustomSwitch1({super.key});
 
   @override
-  _MyCustomWidgetState createState() => _MyCustomWidgetState();
+  _MyCustomSwitch1State createState() => _MyCustomSwitch1State();
 }
 
-class _MyCustomWidgetState extends State<MyCustomWidget>
+class _MyCustomSwitch1State extends State<MyCustomSwitch1>
     with TickerProviderStateMixin {
   bool isTapped = false;
 

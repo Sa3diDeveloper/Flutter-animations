@@ -5,12 +5,12 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-class MyCustomWidget extends StatefulWidget {
+class MyCustomSlidableCards extends StatefulWidget {
   @override
-  _MyCustomWidgetState createState() => _MyCustomWidgetState();
+  _MyCustomSlidableCardsState createState() => _MyCustomSlidableCardsState();
 }
 
-class _MyCustomWidgetState extends State<MyCustomWidget> {
+class _MyCustomSlidableCardsState extends State<MyCustomSlidableCards> {
   double _page = 10;
 
   @override
