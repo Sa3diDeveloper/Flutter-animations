@@ -4,10 +4,13 @@ import 'package:animations/animations/other/0.1exapnandable_widget.dart';
 import 'package:animations/animations/other/1.0animated_switch.dart';
 import 'package:animations/animations/other/1.1animated_switch.dart';
 import 'package:animations/animations/other/2.0slidable_cards.dart';
+import 'package:animations/animations/page_Animations/0.1hero_Animations.dart';
+import 'package:animations/animations/page_Animations/0.2hero_Animations.dart';
+import 'package:animations/animations/page_Animations/0.2hero_Animations.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const HreoAnimationsExample1());
 }
 
 class MyApp extends StatelessWidget {
@@ -22,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  MyCustomSlidableCards(),
+      home: const HreoAnimationsExample(),
     );
   }
 }
