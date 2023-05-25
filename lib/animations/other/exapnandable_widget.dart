@@ -1,10 +1,12 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyCustomExpandableWidget extends StatefulWidget {
+  const MyCustomExpandableWidget({super.key});
+
   @override
-  _MyCustomExpandableWidgetState createState() => _MyCustomExpandableWidgetState();
+  _MyCustomExpandableWidgetState createState() =>
+      _MyCustomExpandableWidgetState();
 }
 
 class _MyCustomExpandableWidgetState extends State<MyCustomExpandableWidget> {
@@ -17,7 +19,7 @@ class _MyCustomExpandableWidgetState extends State<MyCustomExpandableWidget> {
       body: Center(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 300,
             ),
             InkWell(
@@ -34,23 +36,28 @@ class _MyCustomExpandableWidgetState extends State<MyCustomExpandableWidget> {
                 });
               },
               child: AnimatedContainer(
-                duration: Duration(seconds: 1),
+                duration: const Duration(seconds: 1),
                 curve: Curves.fastLinearToSlowEaseIn,
-                height:
-                    isTapped ? isExpanded ? 65 : 70 : isExpanded ? 225 : 230,
+                height: isTapped
+                    ? isExpanded
+                        ? 65
+                        : 70
+                    : isExpanded
+                        ? 225
+                        : 230,
                 width: isExpanded ? 385 : 390,
                 decoration: BoxDecoration(
-                  color: Color(0xff6F12E8),
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                  color: const Color(0xff6F12E8),
+                  borderRadius: const BorderRadius.all(Radius.circular(20)),
                   boxShadow: [
                     BoxShadow(
-                      color: Color(0xff6F12E8).withOpacity(0.5),
+                      color: const Color(0xff6F12E8).withOpacity(0.5),
                       blurRadius: 20,
-                      offset: Offset(0, 10),
+                      offset: const Offset(0, 10),
                     ),
                   ],
                 ),
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: isTapped
                     ? Column(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -58,7 +65,7 @@ class _MyCustomExpandableWidgetState extends State<MyCustomExpandableWidget> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
+                              const Text(
                                 'Tap to Expand it',
                                 style: TextStyle(
                                     color: Colors.white,
@@ -81,7 +88,7 @@ class _MyCustomExpandableWidgetState extends State<MyCustomExpandableWidget> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
+                              const Text(
                                 'Tap to Expand it',
                                 style: TextStyle(
                                     color: Colors.white,
@@ -92,11 +99,12 @@ class _MyCustomExpandableWidgetState extends State<MyCustomExpandableWidget> {
                                 isTapped
                                     ? Icons.keyboard_arrow_down
                                     : Icons.keyboard_arrow_up,
-                                color: Colors.white,size: 27,
+                                color: Colors.white,
+                                size: 27,
                               ),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 20,
                           ),
                           Text(
