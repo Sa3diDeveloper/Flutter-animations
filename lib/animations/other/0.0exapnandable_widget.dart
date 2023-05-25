@@ -1,13 +1,14 @@
-
-
 import 'package:flutter/material.dart';
 
-class MyCustomWidget extends StatefulWidget {
+class MyCustomExpandableWidget0 extends StatefulWidget {
+  const MyCustomExpandableWidget0({super.key});
+
   @override
-  _MyCustomWidgetState createState() => _MyCustomWidgetState();
+  _MyCustomExpandableWidget0State createState() =>
+      _MyCustomExpandableWidget0State();
 }
 
-class _MyCustomWidgetState extends State<MyCustomWidget> {
+class _MyCustomExpandableWidget0State extends State<MyCustomExpandableWidget0> {
   String TapToExpandIt = 'Tap to Expand it';
   String Sentence = 'Widgets that have global keys reparent their subtrees when'
       ' they are moved from one location in the tree to another location in the'
@@ -17,8 +18,7 @@ class _MyCustomWidgetState extends State<MyCustomWidget> {
       ' Widgets that have global keys reparent their subtrees when they are moved'
       ' from one location in the tree to another location in the tree. In order'
       ' to reparent its subtree, a widget must arrive at its new location in the'
-      ' tree in the same animation frame in which it was removed from its old'
-      ' location the tree.';
+      ' tree in the same animation frame in which it was removed from its old';
   bool isExpanded = true;
   bool isExpanded2 = true;
 
@@ -26,7 +26,8 @@ class _MyCustomWidgetState extends State<MyCustomWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        physics: BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+        physics: const BouncingScrollPhysics(
+            parent: AlwaysScrollableScrollPhysics()),
         children: [
           InkWell(
             highlightColor: Colors.transparent,
@@ -38,24 +39,24 @@ class _MyCustomWidgetState extends State<MyCustomWidget> {
             },
             child: AnimatedContainer(
               margin: EdgeInsets.symmetric(
-                horizontal: isExpanded ? 25 : 0,
+                horizontal: isExpanded ? 25 : 10,
                 vertical: 20,
               ),
-              padding: EdgeInsets.all(20),
-              height: isExpanded ? 70 : 330,
+              padding: const EdgeInsets.all(20),
+              height: isExpanded ? 70 : 400,
               curve: Curves.fastLinearToSlowEaseIn,
-              duration: Duration(milliseconds: 1200),
+              duration: const Duration(milliseconds: 1200),
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
-                    color: Color(0xff6F12E8).withOpacity(0.5),
+                    color: const Color(0xff6F12E8).withOpacity(0.5),
                     blurRadius: 20,
-                    offset: Offset(5, 10),
+                    offset: const Offset(5, 10),
                   ),
                 ],
-                color: Color(0xff6F12E8),
+                color: const Color(0xff6F12E8),
                 borderRadius: BorderRadius.all(
-                  Radius.circular(isExpanded ? 20 : 0),
+                  Radius.circular(isExpanded ? 20 : 10),
                 ),
               ),
               child: Column(
@@ -65,7 +66,7 @@ class _MyCustomWidgetState extends State<MyCustomWidget> {
                     children: [
                       Text(
                         TapToExpandIt,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 22,
                           fontWeight: FontWeight.w400,
@@ -80,9 +81,9 @@ class _MyCustomWidgetState extends State<MyCustomWidget> {
                       ),
                     ],
                   ),
-                  isExpanded ? SizedBox() : SizedBox(height: 20),
+                  isExpanded ? const SizedBox() : const SizedBox(height: 3),
                   AnimatedCrossFade(
-                    firstChild: Text(
+                    firstChild: const Text(
                       '',
                       style: TextStyle(
                         fontSize: 0,
@@ -90,14 +91,15 @@ class _MyCustomWidgetState extends State<MyCustomWidget> {
                     ),
                     secondChild: Text(
                       Sentence,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
-                        fontSize: 15.7,),
+                        fontSize: 15.7,
+                      ),
                     ),
                     crossFadeState: isExpanded
                         ? CrossFadeState.showFirst
                         : CrossFadeState.showSecond,
-                    duration: Duration(milliseconds: 1200),
+                    duration: const Duration(milliseconds: 1200),
                     reverseDuration: Duration.zero,
                     sizeCurve: Curves.fastLinearToSlowEaseIn,
                   ),
@@ -105,81 +107,84 @@ class _MyCustomWidgetState extends State<MyCustomWidget> {
               ),
             ),
           ),
-          InkWell(
-            highlightColor: Colors.transparent,
-            splashColor: Colors.transparent,
-            onTap: () {
-              setState(() {
-                isExpanded2 = !isExpanded2;
-              });
-            },
-            child: AnimatedContainer(
-              margin: EdgeInsets.symmetric(
-                horizontal: isExpanded2 ? 25 : 0,
-                vertical: 20,
-              ),
-              padding: EdgeInsets.all(20),
-              height: isExpanded2 ? 70 : 330,
-              curve: Curves.fastLinearToSlowEaseIn,
-              duration: Duration(milliseconds: 1200),
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: Color(0xffFF5050).withOpacity(0.5),
-                    blurRadius: 20,
-                    offset: Offset(5, 10),
-                  ),
-                ],
-                color: Color(0xffFF5050),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(isExpanded2 ? 20 : 0),
+          Padding(
+            padding: EdgeInsets.all(isExpanded2 ? 0 : 0),
+            child: InkWell(
+              highlightColor: Colors.transparent,
+              splashColor: Colors.transparent,
+              onTap: () {
+                setState(() {
+                  isExpanded2 = !isExpanded2;
+                });
+              },
+              child: AnimatedContainer(
+                margin: EdgeInsets.symmetric(
+                  horizontal: isExpanded2 ? 25 : 10,
+                  vertical: 20,
                 ),
-              ),
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        TapToExpandIt,
-                        style: TextStyle(
+                padding: const EdgeInsets.all(20),
+                height: isExpanded2 ? 70 : 424,
+                curve: Curves.fastLinearToSlowEaseIn,
+                duration: const Duration(milliseconds: 1200),
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: const Color(0xffFF5050).withOpacity(0.5),
+                      blurRadius: 20,
+                      offset: const Offset(5, 10),
+                    ),
+                  ],
+                  color: const Color(0xffFF5050),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(isExpanded2 ? 20 : 10),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          TapToExpandIt,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 22,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                        Icon(
+                          isExpanded2
+                              ? Icons.keyboard_arrow_down
+                              : Icons.keyboard_arrow_up,
                           color: Colors.white,
-                          fontSize: 22,
-                          fontWeight: FontWeight.w400,
+                          size: 27,
+                        ),
+                      ],
+                    ),
+                    isExpanded2 ? const SizedBox() : const SizedBox(height: 20),
+                    AnimatedCrossFade(
+                      firstChild: const Text(
+                        '',
+                        style: TextStyle(
+                          fontSize: 0,
                         ),
                       ),
-                      Icon(
-                        isExpanded2
-                            ? Icons.keyboard_arrow_down
-                            : Icons.keyboard_arrow_up,
-                        color: Colors.white,
-                        size: 27,
+                      secondChild: Text(
+                        Sentence,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 15.7,
+                        ),
                       ),
-                    ],
-                  ),
-                  isExpanded2 ? SizedBox() : SizedBox(height: 20),
-                  AnimatedCrossFade(
-                    firstChild: Text(
-                      '',
-                      style: TextStyle(
-                        fontSize: 0,
-                      ),
+                      crossFadeState: isExpanded2
+                          ? CrossFadeState.showFirst
+                          : CrossFadeState.showSecond,
+                      duration: const Duration(milliseconds: 1200),
+                      reverseDuration: Duration.zero,
+                      sizeCurve: Curves.fastLinearToSlowEaseIn,
                     ),
-                    secondChild: Text(
-                      Sentence,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15.7,
-                      ),
-                    ),
-                    crossFadeState: isExpanded2
-                        ? CrossFadeState.showFirst
-                        : CrossFadeState.showSecond,
-                    duration: Duration(milliseconds: 1200),
-                    reverseDuration: Duration.zero,
-                    sizeCurve: Curves.fastLinearToSlowEaseIn,
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),

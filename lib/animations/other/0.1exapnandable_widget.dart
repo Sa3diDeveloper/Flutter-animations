@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MyCustomExpandableWidget extends StatefulWidget {
-  const MyCustomExpandableWidget({super.key});
+class MyCustomExpandableWidget1 extends StatefulWidget {
+  const MyCustomExpandableWidget1({super.key});
 
   @override
-  _MyCustomExpandableWidgetState createState() =>
-      _MyCustomExpandableWidgetState();
+  _MyCustomExpandableWidget1State createState() =>
+      _MyCustomExpandableWidget1State();
 }
 
-class _MyCustomExpandableWidgetState extends State<MyCustomExpandableWidget> {
+class _MyCustomExpandableWidget1State extends State<MyCustomExpandableWidget1> {
   bool isTapped = true;
   bool isExpanded = false;
 

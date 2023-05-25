@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MyCustomWidget extends StatefulWidget {
-  const MyCustomWidget({super.key});
+class MyCustomSwitch extends StatefulWidget {
+  const MyCustomSwitch({super.key});
 
   @override
-  _MyCustomWidgetState createState() => _MyCustomWidgetState();
+  _MyCustomSwitchState createState() => _MyCustomSwitchState();
 }
 
-class _MyCustomWidgetState extends State<MyCustomWidget>
+class _MyCustomSwitchState extends State<MyCustomSwitch>
     with TickerProviderStateMixin {
   bool isChecked = false;
   final Duration _duration = const Duration(milliseconds: 370);
