@@ -1,9 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyCustomExpandableWidget1 extends StatefulWidget {
   const MyCustomExpandableWidget1({super.key});
-
   @override
   _MyCustomExpandableWidget1State createState() =>
       _MyCustomExpandableWidget1State();

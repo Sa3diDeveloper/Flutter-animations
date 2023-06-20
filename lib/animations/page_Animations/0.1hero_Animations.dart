@@ -32,6 +32,7 @@ class _HreoAnimationsExampleState extends State<HreoAnimationsExample> {
   }
 }
 
+// ignore: must_be_immutable
 class SecondPage extends StatefulWidget {
   int index;
   SecondPage({

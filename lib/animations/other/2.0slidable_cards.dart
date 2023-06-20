@@ -1,11 +1,12 @@
 
 
 
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
 class MyCustomSlidableCards extends StatefulWidget {
+  const MyCustomSlidableCards({super.key});
+
   @override
   _MyCustomSlidableCardsState createState() => _MyCustomSlidableCardsState();
 }
@@ -77,12 +78,12 @@ class _MyCustomSlidableCardsState extends State<MyCustomSlidableCards> {
             ),
             Positioned.fill(
               child: PageView.builder(
-                physics: BouncingScrollPhysics(
+                physics: const BouncingScrollPhysics(
                     parent: AlwaysScrollableScrollPhysics()),
                 itemCount: 11,
                 controller: pageController,
                 itemBuilder: (context, index) {
-                  return SizedBox();
+                  return const SizedBox();
                 },
               ),
             ),
